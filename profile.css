@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+.profile-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.profile-details {
+    width: 70%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.profile-details h2 {
+    text-align: center;
+}
+.profile-details input,
+.profile-details select,
+.profile-details textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.profile-details button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.profile-details button:hover {
+    background-color: #0056b3;
+}
+.profile-picture {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.message {
+    color: green;
+    text-align: center;
+    margin-top: 20px;
+}

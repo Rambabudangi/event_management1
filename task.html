@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management</title>
+    <link rel="stylesheet" href="CSS/task.css">
+</head>
+<body>
+    <header>
+        <h1>Task Management</h1>
+    </header>
+    <main>
+        <section id="task-management">
+            <h2>Task Management</h2>
+
+            <!-- Assign Task -->
+            <h3>01. Assign Tasks</h3>
+            <button id="assign-task-btn">Assign Task</button>
+            <div id="assign-task" style="display: none;">
+                <form id="assign-task-form">
+                    <label for="task-name">Task Name:</label>
+                    <input type="text" id="task-name" name="task-name" required>
+                    <label for="task-assignee">Assignee:</label>
+                    <input type="text" id="task-assignee" name="task-assignee" required>
+                    <label for="task-due-date">Due Date:</label>
+                    <input type="date" id="task-due-date" name="task-due-date" required>
+                    <button type="submit">Assign Task</button>
+                </form>
+            </div>
+
+            <!-- Task Status -->
+            <h3>02. Task Status</h3>
+            <button id="task-status-btn">View Task Status</button>
+            <div id="task-status" style="display: none;">
+                <p>View and update task status here.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Task ID</th>
+                            <th>Task Name</th>
+                            <th>Assignee</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="task-list">
+                        <!-- Dynamically populated tasks -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Task Calendar -->
+            <h3>03. Task Calendar</h3>
+            <button id="task-calendar-btn">View Task Calendar</button>
+            <div id="task-calendar" style="display: none;">
+                <p>View tasks in the calendar below.</p>
+                <div id="calendar"></div>
+            </div>
+        </section>
+    </main>
+    <script src="JS/task.js"></script>
+</body>
+</html>

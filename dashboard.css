@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+.navbar {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+.navbar .menu {
+    display: flex;
+    gap: 15px;
+}
+.navbar .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+.navbar .menu a:hover {
+    text-decoration: underline;
+}
+.sidebar {
+    width: 250px;
+    background-color: #343a40;
+    color: white;
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    padding: 20px;
+}
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.sidebar a:hover {
+    background-color: #495057;
+}
+.content {
+    margin-left: 270px;
+    padding: 20px;
+}
+.content h2 {
+    margin-top: 0;
+    padding-left:10px;
+}
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.card h3 {
+    margin-top: 0;
+}

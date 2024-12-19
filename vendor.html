@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Management</title>
+    <link rel="stylesheet" href="CSS/vendor.css">
+</head>
+<body>
+    <header>
+        <h1>Vendor Management</h1>
+    </header>
+    <main>
+        <section id="vendor-management">
+            <h2>Vendors</h2>
+
+            <!-- Add Vendor -->
+            <h3>01. Add Vendor</h3>
+            <button id="add-vendor-btn">Add Vendor</button>
+            <div id="add-vendor" style="display: none;">
+                <form id="vendor-form">
+                    <label for="vendor-name">Vendor Name:</label>
+                    <input type="text" id="vendor-name" name="vendor-name" required>
+                    <label for="vendor-email">Email:</label>
+                    <input type="email" id="vendor-email" name="vendor-email" required>
+                    <label for="vendor-phone">Phone:</label>
+                    <input type="text" id="vendor-phone" name="vendor-phone">
+                    <label for="vendor-service">Service Provided:</label>
+                    <input type="text" id="vendor-service" name="vendor-service" required>
+                    <button type="submit">Add Vendor</button>
+                </form>
+            </div>
+
+            <!-- Manage Vendors -->
+            <h3>02. Manage Vendors</h3>
+            <button id="manage-vendor-btn">Manage Vendors</button>
+            <div id="manage-vendor" style="display: none;">
+                <p>Manage vendor details here.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Vendor ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Service</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="vendor-list">
+                        <!-- Dynamically populated vendor list -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Vendor Contracts -->
+            <h3>03. Vendor Contracts</h3>
+            <button id="vendor-contracts-btn">View Contracts</button>
+            <div id="vendor-contracts" style="display: none;">
+                <p>View contracts with vendors here.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Vendor Name</th>
+                            <th>Contract Date</th>
+                            <th>Contract Details</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contract-list">
+                        <!-- Dynamically populated contracts -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Services -->
+            <h3>04. Services</h3>
+            <button id="services-btn">View Services</button>
+            <div id="services" style="display: none;">
+                <p>List of services offered by vendors.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody id="service-list">
+                        <!-- Dynamically populated services -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="JS/vendor.js"></script>
+</body>
+</html>

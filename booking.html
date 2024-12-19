@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings and Registrations</title>
+    <link rel="stylesheet" href="CSS/booking.css">
+</head>
+<body>
+    <header>
+        <h1>Bookings and Registrations</h1>
+    </header>
+    <main>
+        <section id="bookings">
+            <h2>Bookings/Registrations</h2>
+
+            <!-- View Bookings -->
+            <h3>01. View Bookings</h3>
+            <button id="view-bookings-btn">View Bookings</button>
+            <div id="view-bookings" style="display: none;">
+                <p>List of all bookings will be displayed here.</p>
+                <!-- Example Placeholder Table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Booking ID</th>
+                            <th>Name</th>
+                            <th>Event</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>John Doe</td>
+                            <td>Annual Meetup</td>
+                            <td>2024-12-25</td>
+                            <td>Pending</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Approve/Reject Requests -->
+            <h3>02. Approve/Reject Requests</h3>
+            <button id="manage-requests-btn">Manage Requests</button>
+            <div id="manage-requests" style="display: none;">
+                <p>Approve or reject booking requests here.</p>
+                <!-- Example Placeholder Table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Request ID</th>
+                            <th>Name</th>
+                            <th>Event</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Jane Smith</td>
+                            <td>Music Concert</td>
+                            <td>
+                                <button>Approve</button>
+                                <button>Reject</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Payment Status -->
+            <h3>03. Payment Status</h3>
+            <button id="payment-status-btn">Check Payment Status</button>
+            <div id="payment-status" style="display: none;">
+                <p>View payment details for bookings.</p>
+                <!-- Example Placeholder Table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Booking ID</th>
+                            <th>Name</th>
+                            <th>Event</th>
+                            <th>Payment Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Emily Clark</td>
+                            <td>Workshop</td>
+                            <td>Paid</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Attendee List -->
+            <h3>04. Attendee List</h3>
+            <button id="attendee-list-btn">View Attendee List</button>
+            <div id="attendee-list" style="display: none;">
+                <p>List of attendees for the selected event.</p>
+                <!-- Example Placeholder Table -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Attendee ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Event</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Michael Brown</td>
+                            <td>michael@example.com</td>
+                            <td>Seminar</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="JS/booking.js"></script>
+</body>
+</html>

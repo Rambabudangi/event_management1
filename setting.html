@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="CSS/setting.css">
+</head>
+<body>
+    <header>
+        <h1>Settings</h1>
+    </header>
+    <main>
+        <section id="settings">
+            <h2>Settings</h2>
+
+            <!-- Profile Settings -->
+            <h3>01. Profile Settings</h3>
+            <button id="profile-settings-btn">Edit Profile</button>
+            <div id="profile-settings" style="display: none;">
+                <form id="profile-form">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Save Profile</button>
+                </form>
+            </div>
+
+            <!-- Notification Preferences -->
+            <h3>02. Notification Preferences</h3>
+            <button id="notifications-btn">Set Notifications</button>
+            <div id="notification-preferences" style="display: none;">
+                <form id="notification-form">
+                    <label for="email-notifications">
+                        <input type="checkbox" id="email-notifications" name="email-notifications">
+                        Email Notifications
+                    </label>
+                    <label for="sms-notifications">
+                        <input type="checkbox" id="sms-notifications" name="sms-notifications">
+                        SMS Notifications
+                    </label>
+                    <button type="submit">Save Preferences</button>
+                </form>
+            </div>
+
+            <!-- Payment Gateways Integration -->
+            <h3>03. Payment Gateways Integration</h3>
+            <button id="payment-gateways-btn">Configure Payment Gateways</button>
+            <div id="payment-gateways" style="display: none;">
+                <form id="payment-form">
+                    <label for="gateway-name">Payment Gateway Name:</label>
+                    <input type="text" id="gateway-name" name="gateway-name" required>
+                    <label for="gateway-api">API Key:</label>
+                    <input type="text" id="gateway-api" name="gateway-api" required>
+                    <button type="submit">Add Gateway</button>
+                </form>
+            </div>
+
+            <!-- System Configuration -->
+            <h3>04. System Configuration</h3>
+            <button id="system-config-btn">Configure System</button>
+            <div id="system-configuration" style="display: none;">
+                <form id="system-config-form">
+                    <label for="site-name">Site Name:</label>
+                    <input type="text" id="site-name" name="site-name" required>
+                    <label for="timezone">Timezone:</label>
+                    <select id="timezone" name="timezone" required>
+                        <option value="UTC">UTC</option>
+                        <option value="GMT">GMT</option>
+                        <option value="EST">EST</option>
+                    </select>
+                    <button type="submit">Save Configuration</button>
+                </form>
+            </div>
+
+        </section>
+    </main>
+    <script src="JS/setting.js"></script>
+</body>
+</html>

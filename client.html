@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Management</title>
+    <link rel="stylesheet" href="CSS/client.css">
+</head>
+<body>
+    <header>
+        <h1>Client Management</h1>
+    </header>
+    <main>
+        <section id="client-management">
+            <h2>Clients/Participants</h2>
+
+            <!-- Add New Client/Participant -->
+            <h3>01. Add New Client/Participant</h3>
+            <button id="add-client-btn">Add Client</button>
+            <div id="add-client" style="display: none;">
+                <form id="client-form">
+                    <label for="client-name">Name:</label>
+                    <input type="text" id="client-name" name="client-name" required>
+                    <label for="client-email">Email:</label>
+                    <input type="email" id="client-email" name="client-email" required>
+                    <label for="client-phone">Phone:</label>
+                    <input type="text" id="client-phone" name="client-phone">
+                    <button type="submit">Add Client</button>
+                </form>
+            </div>
+
+            <!-- Manage Client Details -->
+            <h3>02. Manage Client Details</h3>
+            <button id="manage-client-btn">Manage Clients</button>
+            <div id="manage-client" style="display: none;">
+                <p>Manage client details here.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Client ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="client-list">
+                        <!-- Dynamically populated client list -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Feedback & Reviews -->
+            <h3>03. Feedback & Reviews</h3>
+            <button id="feedback-btn">View Feedback</button>
+            <div id="feedback" style="display: none;">
+                <p>Client feedback and reviews will be displayed here.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Client Name</th>
+                            <th>Feedback</th>
+                        </tr>
+                    </thead>
+                    <tbody id="feedback-list">
+                        <!-- Dynamically populated feedback list -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="JS/client.js"></script>
+</body>
+</html>

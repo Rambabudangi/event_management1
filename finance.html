@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Management</title>
+    <link rel="stylesheet" href="CSS/finance.css">
+</head>
+<body>
+    <header>
+        <h1>Finance Management</h1>
+    </header>
+    <main>
+        <section id="finance-management">
+            <h2>Finance Management</h2>
+
+            <!-- Budget Management -->
+            <h3>01. Budget Management</h3>
+            <button id="budget-btn">Manage Budget</button>
+            <div id="budget-section" style="display: none;">
+                <form id="budget-form">
+                    <label for="budget-name">Budget Name:</label>
+                    <input type="text" id="budget-name" name="budget-name" required>
+                    <label for="budget-amount">Amount:</label>
+                    <input type="number" id="budget-amount" name="budget-amount" required>
+                    <button type="submit">Add Budget</button>
+                </form>
+                <h4>Current Budgets</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Budget Name</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="budget-list">
+                        <!-- Budget items will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Expense Tracking -->
+            <h3>02. Expense Tracking</h3>
+            <button id="expense-btn">Track Expenses</button>
+            <div id="expense-section" style="display: none;">
+                <form id="expense-form">
+                    <label for="expense-name">Expense Name:</label>
+                    <input type="text" id="expense-name" name="expense-name" required>
+                    <label for="expense-amount">Amount:</label>
+                    <input type="number" id="expense-amount" name="expense-amount" required>
+                    <label for="expense-category">Category:</label>
+                    <input type="text" id="expense-category" name="expense-category" required>
+                    <button type="submit">Add Expense</button>
+                </form>
+                <h4>Expenses</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Expense Name</th>
+                            <th>Amount</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expense-list">
+                        <!-- Expense items will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Payments -->
+            <h3>03. Payments (Incoming & Outgoing)</h3>
+            <button id="payments-btn">Manage Payments</button>
+            <div id="payments-section" style="display: none;">
+                <form id="payment-form">
+                    <label for="payment-type">Payment Type:</label>
+                    <select id="payment-type" name="payment-type" required>
+                        <option value="incoming">Incoming</option>
+                        <option value="outgoing">Outgoing</option>
+                    </select>
+                    <label for="payment-amount">Amount:</label>
+                    <input type="number" id="payment-amount" name="payment-amount" required>
+                    <label for="payment-description">Description:</label>
+                    <input type="text" id="payment-description" name="payment-description" required>
+                    <button type="submit">Add Payment</button>
+                </form>
+                <h4>Payments</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Amount</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody id="payment-list">
+                        <!-- Payment items will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Generate Invoices -->
+            <h3>04. Generate Invoices</h3>
+            <button id="invoice-btn">Generate Invoice</button>
+            <div id="invoice-section" style="display: none;">
+                <form id="invoice-form">
+                    <label for="invoice-client">Client Name:</label>
+                    <input type="text" id="invoice-client" name="invoice-client" required>
+                    <label for="invoice-amount">Amount:</label>
+                    <input type="number" id="invoice-amount" name="invoice-amount" required>
+                    <label for="invoice-date">Date:</label>
+                    <input type="date" id="invoice-date" name="invoice-date" required>
+                    <button type="submit">Generate Invoice</button>
+                </form>
+                <h4>Invoices</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Client</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="invoice-list">
+                        <!-- Invoice items will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="JS/finance.js"></script>
+</body>
+</html>

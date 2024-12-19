@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="CSS/usermanagement.css">
+</head>
+<body>
+    <header>
+        <h1>User Management</h1>
+    </header>
+    <main>
+        <section id="user-management">
+            <h2>User Management</h2>
+
+            <!-- Admin Panel -->
+            <h3>01. Admin Panel</h3>
+            <button id="view-users-btn">View Users</button>
+            <div id="admin-panel" style="display: none;">
+                <h4>List of Users</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-list">
+                        <!-- Users will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Role Assignments -->
+            <h3>02. Role Assignments</h3>
+            <button id="role-assign-btn">Assign Role</button>
+            <div id="role-assignment-section" style="display: none;">
+                <form id="role-assignment-form">
+                    <label for="user-id">User ID:</label>
+                    <input type="text" id="user-id" name="user-id" required>
+                    <label for="role">Role:</label>
+                    <select id="role" name="role" required>
+                        <option value="admin">Admin</option>
+                        <option value="manager">Manager</option>
+                        <option value="user">User</option>
+                    </select>
+                    <button type="submit">Assign Role</button>
+                </form>
+                <h4>Assigned Roles</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Assigned Role</th>
+                        </tr>
+                    </thead>
+                    <tbody id="role-list">
+                        <!-- Role assignments will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Access Permissions -->
+            <h3>03. Access Permissions</h3>
+            <button id="permissions-btn">Set Permissions</button>
+            <div id="permissions-section" style="display: none;">
+                <form id="permissions-form">
+                    <label for="role-permission">Role:</label>
+                    <select id="role-permission" name="role-permission" required>
+                        <option value="admin">Admin</option>
+                        <option value="manager">Manager</option>
+                        <option value="user">User</option>
+                    </select>
+                    <label for="permissions">Permissions:</label>
+                    <textarea id="permissions" name="permissions" placeholder="Describe the permissions" required></textarea>
+                    <button type="submit">Set Permissions</button>
+                </form>
+                <h4>Permissions by Role</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Role</th>
+                            <th>Permissions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="permissions-list">
+                        <!-- Permissions will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="JS/usermanagement.js"></script>
+</body>
+</html>

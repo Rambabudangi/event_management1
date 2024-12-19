@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Management</title>
+    <link rel="stylesheet" href="CSS/marketing.css">
+</head>
+<body>
+    <header>
+        <h1>Marketing Management</h1>
+    </header>
+    <main>
+        <section id="marketing-management">
+            <h2>Marketing Management</h2>
+
+            <!-- Send Invitations -->
+            <h3>01. Send Invitations</h3>
+            <button id="send-invitation-btn">Send Invitations</button>
+            <div id="invitation-section" style="display: none;">
+                <form id="invitation-form">
+                    <label for="invite-name">Name:</label>
+                    <input type="text" id="invite-name" name="invite-name" required>
+                    <label for="invite-email">Email:</label>
+                    <input type="email" id="invite-email" name="invite-email" required>
+                    <label for="invite-event">Event:</label>
+                    <input type="text" id="invite-event" name="invite-event" required>
+                    <button type="submit">Send Invitation</button>
+                </form>
+                <h4>Sent Invitations</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Event</th>
+                        </tr>
+                    </thead>
+                    <tbody id="invitation-list">
+                        <!-- Invitations will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Promotional Campaigns -->
+            <h3>02. Promotional Campaigns</h3>
+            <button id="campaign-btn">Create Campaign</button>
+            <div id="campaign-section" style="display: none;">
+                <form id="campaign-form">
+                    <label for="campaign-name">Campaign Name:</label>
+                    <input type="text" id="campaign-name" name="campaign-name" required>
+                    <label for="campaign-details">Details:</label>
+                    <textarea id="campaign-details" name="campaign-details" required></textarea>
+                    <button type="submit">Create Campaign</button>
+                </form>
+                <h4>Active Campaigns</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Campaign Name</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody id="campaign-list">
+                        <!-- Campaigns will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Social Media Integration -->
+            <h3>03. Social Media Integration</h3>
+            <button id="social-media-btn">Integrate Social Media</button>
+            <div id="social-media-section" style="display: none;">
+                <form id="social-media-form">
+                    <label for="social-media-platform">Platform:</label>
+                    <select id="social-media-platform" name="social-media-platform" required>
+                        <option value="facebook">Facebook</option>
+                        <option value="twitter">Twitter</option>
+                        <option value="instagram">Instagram</option>
+                    </select>
+                    <label for="social-media-post">Post Content:</label>
+                    <textarea id="social-media-post" name="social-media-post" required></textarea>
+                    <button type="submit">Post to Social Media</button>
+                </form>
+                <h4>Posted Content</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Platform</th>
+                            <th>Post Content</th>
+                        </tr>
+                    </thead>
+                    <tbody id="social-media-list">
+                        <!-- Social media posts will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="JS/marketing.js"></script>
+</body>
+</html>

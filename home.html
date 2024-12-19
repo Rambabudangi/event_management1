@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management Platform</title>
+    <link rel="stylesheet" href="CSS/home.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+
+        <div class="auth-links">
+          <a href="login.html">Login</a><a href="signup.html">Signup</a>
+        </div>
+    </nav>
+
+    <!-- Introduction Section -->
+    <section class="intro">
+        <h1>Welcome to GOLDEN HOUR EVENTS</h1>
+        <p>Our platform provides a comprehensive solution for organizing, managing, and attending events. Whether you're hosting an event or looking to attend one, we've got everything you need. From event creation, registration, to reminders, our platform simplifies event management to make your experience seamless and enjoyable.</p>
+        <button onclick="window.location.href='#'">Get Started</button>
+    </section>
+<center>    <section id="countdown">
+        <h1>Countdown to the Event</h1>
+        <div id="timer">
+          <span id="days">00</span> Days 
+          <span id="hours">00</span> Hours 
+          <span id="minutes">00</span> Minutes 
+          <span id="seconds">00</span> Seconds
+        </div>
+      </section>
+    </center>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Event Management Platform. All rights reserved.</p>
+    </footer>
+<script>
+    // Countdown Timer
+const eventDate = new Date('December 15, 2024 17:00:00').getTime();
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const timeLeft = eventDate - now;
+
+  if (timeLeft > 0) {
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    document.getElementById('days').innerText = days;
+    document.getElementById('hours').innerText = hours;
+    document.getElementById('minutes').innerText = minutes;
+    document.getElementById('seconds').innerText = seconds;
+  } else {
+    document.getElementById('timer').innerText = "The event has started!";
+  }
+}
+// Update countdown every second
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
+
+</body>
+</html>

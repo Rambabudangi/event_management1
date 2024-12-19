@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venue Management</title>
+    <link rel="stylesheet" href="CSS/venue.css">
+</head>
+<body>
+    <header>
+        <h1>Venue Management</h1>
+    </header>
+    <main>
+        <section id="venue-management">
+            <h2>Venue Management</h2>
+
+            <!-- Add Venue -->
+            <h3>01. Add Venue</h3>
+            <button id="add-venue-btn">Add Venue</button>
+            <div id="add-venue" style="display: none;">
+                <form id="venue-form">
+                    <label for="venue-name">Venue Name:</label>
+                    <input type="text" id="venue-name" name="venue-name" required>
+                    <label for="venue-location">Location:</label>
+                    <input type="text" id="venue-location" name="venue-location" required>
+                    <label for="venue-capacity">Capacity:</label>
+                    <input type="number" id="venue-capacity" name="venue-capacity" required>
+                    <label for="venue-availability">Available Dates:</label>
+                    <input type="text" id="venue-availability" name="venue-availability" placeholder="MM/DD/YYYY" required>
+                    <button type="submit">Add Venue</button>
+                </form>
+            </div>
+
+            <!-- Check Availability -->
+            <h3>02. Check Availability</h3>
+            <button id="check-availability-btn">Check Availability</button>
+            <div id="check-availability" style="display: none;">
+                <p>Enter a date to check availability.</p>
+                <form id="check-availability-form">
+                    <label for="check-date">Date:</label>
+                    <input type="text" id="check-date" name="check-date" placeholder="MM/DD/YYYY" required>
+                    <button type="submit">Check</button>
+                </form>
+                <p id="availability-status"></p>
+            </div>
+
+            <!-- Venue Reservations -->
+            <h3>03. Venue Reservations</h3>
+            <button id="venue-reservations-btn">Manage Reservations</button>
+            <div id="venue-reservations" style="display: none;">
+                <p>Manage venue reservations here.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Reservation ID</th>
+                            <th>Venue Name</th>
+                            <th>Reservation Date</th>
+                            <th>Client Name</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reservation-list">
+                        <!-- Dynamically populated reservations -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="JS/venue.js"></script>
+</body>
+</html>

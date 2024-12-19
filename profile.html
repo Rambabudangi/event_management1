@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Event Management Platform</title>
+     <link rel="stylesheet" href="CSS/profile.css">
+</head>
+<body>
+
+    <div class="profile-container">
+        <!-- Profile Details Section -->
+        <div class="profile-details">
+            <div class="profile-picture">
+                <!-- Profile Picture Section -->
+                <label for="profile-pic">Profile Picture</label><br>
+                <img id="profilePicPreview" src="default-profile.jpg" alt="User Picture">
+                <input type="file" id="profile-pic" accept="image/*">
+            </div>
+
+            <h2>User Profile</h2>
+            
+            <!-- Personal Information Section -->
+            <div class="personal-info">
+                <div>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="John Doe" disabled>
+                </div>
+                <div>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="johndoe@example.com" disabled>
+                </div>
+                <div>
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="(123) 456-7890">
+                </div>
+            </div>
+            
+            <!-- Event Feedback Section -->
+            <div class="event-feedback">
+                <label for="feedback">Event Feedback</label>
+                <textarea id="feedback" rows="4" placeholder="Leave your feedback about events you have attended..."></textarea>
+            </div>
+
+            <!-- Buttons for Editing/Updating -->
+            <div class="buttons">
+                <button onclick="editProfile()">Edit Profile</button>
+                <button onclick="saveChanges()">Save Changes</button>
+            </div>
+
+            <div class="message" id="message"></div>
+        </div>
+    </div>
+
+    <script src="profile.html"></script>
+
+</body>
+</html>

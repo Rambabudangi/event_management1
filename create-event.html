@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Management</title>
+    <link rel="stylesheet" href="CSS/create-event.css">
+</head>
+<body>
+    <header>
+        <h1>Event Management System</h1>
+    </header>
+    <main>
+        <section id="events">
+            <h2>Events</h2>
+
+            <!-- Create New Event -->
+            <h3>01. Create New Event</h3>
+            <button id="create-event-btn">Create New Event</button>
+            <div id="create-event-form" style="display: none;">
+                <form>
+                    <label for="event-name">Event Name:</label>
+                    <input type="text" id="event-name" required><br>
+
+                    <label for="event-date">Event Date:</label>
+                    <input type="date" id="event-date" required><br>
+
+                    <label for="event-location">Event Location:</label>
+                    <input type="text" id="event-location" required><br>
+
+                    <button type="submit">Save Event</button>
+                </form>
+            </div>
+
+            <!-- Manage Events -->
+            <h3>02. Manage Events</h3>
+            <ul>
+                <li><a href="#" id="view-edit-delete">View/Edit/Delete Events</a></li>
+                <li><a href="#" id="event-status">Event Status (Upcoming, Ongoing, Completed)</a></li>
+            </ul>
+
+            <!-- Event Templates -->
+            <h3>03. Event Templates</h3>
+            <button id="create-template-btn">Create Template</button>
+            <div id="template-section" style="display: none;">
+                <form>
+                    <label for="template-name">Template Name:</label>
+                    <input type="text" id="template-name" required><br>
+
+                    <label for="template-description">Description:</label>
+                    <textarea id="template-description" rows="4" required></textarea><br>
+
+                    <button type="submit">Save Template</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="booking.html"></script>
+</body>
+</html>
